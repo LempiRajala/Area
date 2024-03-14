@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  color: #ddd;
+  background-color: #222;
+  font-family: cursive;
+  user-select: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px;
+  letter-spacing: 1px;
+}
+
+input[type=text] {
+  background-color: var(--body-bg);
+  border: black inset 1px;
+}
+
+input[type=checkbox] {
+  cursor: pointer;
+  margin: 4px 8px 4px 4px;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  margin: 5px 0;
+}
+
+th, td {
+  padding: 0 5px;
+}
+
+td {
+  text-align: center;
+}
+
+th {
+  text-align: left;
+}
+
+hr {
+  margin: 0 5px;
+  border: none;
+  height: 1px;
+  background: radial-gradient(grey, transparent);
+}
+
+button {
+  cursor: pointer;
+}
+button.primary {
+  color: aqua;
+  padding: 5px;
+  margin: 5px;
+  border: 1px black;
+  width: calc(100% - 10px);
+  border-style: inset;
+  background: var(--body-bg);
+  letter-spacing: 1px;
+}
+button.primary:hover {
+  border-style: outset;
+}
+
+.players {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 1px solid var(--border-color);
+  border-top: none;
+  border-left: none;
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
+  row-gap: 5px;
+  column-gap: 10px;
+}
+
+.modal-msg {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+}
+.modal-msg > *:first-child {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  box-shadow: 4px 4px 10px black;
+  padding: 5px;
+  background-color: var(--body-bg);
+  border: var(--border-color) 1px solid;
+}
+
+.new-game-msg > * {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.new-game-msg.game-field-sizes label {
+  margin-right: 5px;
+}
+
+.dices {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.dices .dice {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(to right bottom, black, #222);
+  border-width: 2px;
+  border-style: outset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-results h3 {
+  text-align: center;
+}
+.game-results table {
+  margin: 8px 0;
+}
+.game-results .game-over-reason {
+  font-style: italic;
+}
+
+.fps {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50px;
+  margin-top: 4px;
+  margin-left: 4px;
+  font-size: smaller;
+  font-family: monospace;
+  text-shadow: 1px 1px 1px black;
+}
+
+.errors > * {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.errors > * > * {
+  padding-right: 5px;
+}
+
+/*# sourceMappingURL=bundle.css.map */
